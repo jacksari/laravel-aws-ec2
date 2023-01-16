@@ -13,7 +13,13 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+use App\Http\Controllers\homeController;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::get('/prueba', [homeController::class, 'index']);
+
+// Route::get('lote/cintillos-libres',  [ApiLoteController::class, 'getFreeCintillos']);
